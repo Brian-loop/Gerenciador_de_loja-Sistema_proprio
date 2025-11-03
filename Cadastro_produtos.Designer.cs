@@ -44,12 +44,11 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.informaçõesDoProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historicoDeVendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.movimentaçãoDeEstoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.toolStrip1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -73,7 +72,7 @@
             this.toolStripSeparator7});
             this.toolStrip1.Location = new System.Drawing.Point(3, 44);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(412, 72);
+            this.toolStrip1.Size = new System.Drawing.Size(381, 72);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -189,56 +188,55 @@
     "      F1        |        F1       |";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // menuStrip1
+            // tabControl1
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informaçõesDoProdutoToolStripMenuItem,
-            this.historicoDeVendasToolStripMenuItem,
-            this.movimentaçãoDeEstoqueToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 134);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(439, 24);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 137);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1156, 518);
+            this.tabControl1.TabIndex = 4;
             // 
-            // informaçõesDoProdutoToolStripMenuItem
+            // tabPage1
             // 
-            this.informaçõesDoProdutoToolStripMenuItem.Name = "informaçõesDoProdutoToolStripMenuItem";
-            this.informaçõesDoProdutoToolStripMenuItem.Size = new System.Drawing.Size(148, 20);
-            this.informaçõesDoProdutoToolStripMenuItem.Text = "Informações do produto";
+            this.tabPage1.CausesValidation = false;
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1148, 492);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Info. do produto";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // historicoDeVendasToolStripMenuItem
+            // tabPage2
             // 
-            this.historicoDeVendasToolStripMenuItem.Name = "historicoDeVendasToolStripMenuItem";
-            this.historicoDeVendasToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
-            this.historicoDeVendasToolStripMenuItem.Text = "Historico de vendas";
-            // 
-            // movimentaçãoDeEstoqueToolStripMenuItem
-            // 
-            this.movimentaçãoDeEstoqueToolStripMenuItem.Name = "movimentaçãoDeEstoqueToolStripMenuItem";
-            this.movimentaçãoDeEstoqueToolStripMenuItem.Size = new System.Drawing.Size(160, 20);
-            this.movimentaçãoDeEstoqueToolStripMenuItem.Text = "Movimentação de estoque";
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1148, 492);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Cadastro_produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 657);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Cadastro_produtos";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro_produtos";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,9 +258,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem informaçõesDoProdutoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem historicoDeVendasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem movimentaçãoDeEstoqueToolStripMenuItem;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
