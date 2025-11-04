@@ -16,5 +16,20 @@ namespace Sistema_de_loja___SupremeCar
         {
             InitializeComponent();
         }
+
+        private void toolStripButtonNovo_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = tabCadastroUsuario;
+        }
+
+        private void toolStripButtonConsultar_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = tabListaUsuario;
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

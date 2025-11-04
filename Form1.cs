@@ -30,17 +30,23 @@ namespace Sistema_de_loja___SupremeCar
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-
+            Cadastro_clientes cadClientes = new Cadastro_clientes();
+            cadClientes.Show();
+        }
+        private void btnFuncionario_Click(object sender, EventArgs e)
+        {
+            Cadastro_funcionarios cadFuncionarios = new Cadastro_funcionarios();
+            cadFuncionarios.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnFornecedor_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            Cadastro_fornecedores cadFornecedores = new Cadastro_fornecedores();
+            cadFornecedores.Show();
         }
     }
+
+
+
+    
 }
