@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using System.Data;
+//using MySql.Data.MySqlClient;       //conexao com o banco de dados
 
 namespace Sistema_de_loja___SupremeCar
 {
@@ -46,7 +49,52 @@ namespace Sistema_de_loja___SupremeCar
         }
     }
 
+    //=============================================================================================================================
+    //class de conexao com o banco de dados
+
+    public class BancoDeDados
+    {
+        private static string servidor = "localhost";
+        private static string banco = "db_loja_carros";
+        private static string usuario = "root";
+        private static string senha = "";
+        private static string stringConexao = $"SERVER={servidor}; DATABASE={banco}; UID={usuario}; PWD={senha};";
+
+        private MySqlConnection conexao = new MySqlConnection(stringConexao);
+
+        public MySqlConnection AbrirConexao()
+        {
+            try
+            {
+                if (conexao.State == System.Data.ConnectionState.Closed)
+                {
+                    conexao.Open();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao abrir a conexão: " + ex.Message);
+            }
+            return conexao;
+        }
+
+        public void FecharConexao()
+        {
+            try
+            {
+                if (conexao.State == System.Data.ConnectionState.Open)
+                {
+                    conexao.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao fechar a conexão: " + ex.Message);
+            }
+        }
+    }
+
+    //=============================================================================================================================
 
 
-    
 }

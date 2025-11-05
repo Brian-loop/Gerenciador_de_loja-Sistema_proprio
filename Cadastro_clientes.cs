@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,38 @@ namespace Sistema_de_loja___SupremeCar
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+            string nome = textBoxNome.Text;
+            string email = textBoxEmail.Text;
+            string cpf = maskedTextBoxCpf.Text;
+            string telefone = textBoxTelefone.Text;
+            string cidade = textBoxCidade.Text;
+            string cep = maskedTextBoxCep.Text;
+            string estado = comboBoxEstado.Text;
+            string endereco = textBoxEndereco.Text;
+
+            BancoDeDados conexao = new BancoDeDados();
+
+            try
+            {
+                using (MySqlConnection conn = conexao.AbrirConexao())
+                {
+                    string scriptSql = "INSERT INTO tb_clientes (nome, email, cpf, telefone, cidade, cep, estado, endereco)" + 
+                        "VALUES (@nome, @email, @cpf, @telfone @cidade, @cep, @estado, @endereco)";
+                    using (MySqlCommand)
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
+
         }
     }
 }
